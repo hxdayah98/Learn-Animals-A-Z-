@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+<title>Noir + Azure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="ifolder/others/ikon.png" type="image/gif" sizes="16x16">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!--------------------------------------------------------------- START CSS STYLING ---------------------------------------------------------------> 
+<style>
+body{background-image:url("ifolder/others/background.png");
+	 font-family: Calibri;
+	 font-size: 15px;}
+img{border-radius:50%;
+    height:20%;}
+.zoom:hover {
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5); 
+}
+.w3-modal-content {
+	width:900px;
+	height:380px;
+}
+.container {
+  position: relative;
+  top: 0px;
+  left: 40px;
+  width: 50%;
+}
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 150%;
+  height: 0;
+  transition: 0.3s ease;
+}
+.container:hover .overlay {
+  height: 100%;
+}
+.text {
+  color: black;
+  font-family: Calibri;
+  font-size: 13px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: left;
+  border: solid 1px white;
+  width: 150px;
+  height: 150px;
+  overflow: auto;
+  background-color: white;
+}
+::selection {
+    background-color: #ff8719;
+    color: #fff;
+}
+</style>
+<!--------------------------------------------------------------- END CSS STYLING ---------------------------------------------------------------> 
+
+<body>
+<div class="w3-container" style="position: absolute; top: 120px; left: 100px; width: 1150px; height: 380px;">
+ 
+<div class="w3-bar w3-black">
+    <button class="w3-bar-item w3-button tablink w3-blue" onclick="openCity(event,'Home')">Home</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Profile')">Profile</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Animals')">Animals Encyclopedia (A-Z)</button>
+	<button class="w3-bar-item w3-button tablink" onclick="openCity(event,'Quiz')">Quizzes</button>
+</div>
+<marquee style="background-color:black;color:white;position:absolute;top:8px;right:90px;width:20%;"><b>Welcome to my personal website. Thank you for visiting!</b></marquee>
+<img src="ifolder/others/flower.gif" style="height:5%;position:absolute;top:8px;right:50px;">  
+
+<!---------------------------------------------------------------- START FIRST TAB ---------------------------------------------------------------->
+  <div id="Home" class="w3-container w3-border city" style="background-color:white;height: 382px;">
+    <br><center>
+	<table style="width:970px;"><br>
+	<tr><td><div class="container">
+		<img src="ifolder/others/purpose0.png" style="border-radius:0%;width:150%;" class="image">
+		<div class="overlay">
+		<div class="text">The main purpose of this project is to fulfil the requirement to accomplish the individual assessment given by our lecturer.
+						  Since the project is based on one's creativity, I've chosen 'simplicity' as my theme. This website basically shows the
+						  list of 26 selected animals from each alphabet, A to Z, and some fun facts about them. There are also videos attached for each of the animals.</div>
+		</div></div></td>
+		<td><div class="container">
+		<img src="ifolder/others/intro0.png" style="border-radius:0%;width:150%;" class="image">
+		<div class="overlay">
+		<div class="text">This website basically shows the
+						  list of 26 selected animals from each alphabet, A to Z, and some fun facts about them. There are also videos attached for each of the animals.
+						  The main colours used for the interface are blue, white and black which correlate the theme, 'Simplicity'.</div>
+		</div></div></td>
+		<td><div class="container">
+		<img src="ifolder/others/credit0.png" style="border-radius:0%;width:150%;" class="image">
+		<div class="overlay">
+		<div class="text">The credits are all go to the respective owners.
+		<ul style="list-style-type:disc">
+				<li>Videos are mostly taken from Youtube channel and websites about animals.</li>
+				<li>Pictures are taken from Google Images.</li>
+				<li>Ideas of the interface are referred from W3Schools website.</li>
+			</ul>
+		</div>
+		</div></div></td>
+	</tr>
+	<tr><td colspan="3" align="center"><br><br>This website is made and prepared by <b style="color:#226de8"><i>Ku Nur Hidayah</i></b></td></tr></table></center>
+  </div>
+<!---------------------------------------------------------------- END FIRST TAB ----------------------------------------------------------------> 
+
+<!---------------------------------------------------------------- START SECOND TAB ----------------------------------------------------------------> 
+  <div id="Profile" class="w3-container w3-border city" style="display:none;background-color:white;">
+    <br>
+	<table class="w3-border w3-striped w3-bordered" style="width: 750px" cellpadding="5">
+	<tr><td rowspan="7"><img src="ifolder/others/hidayah1.jpg" onmouseover="backImage('ifolder/others/hidayah2.jpg')" 
+	onmouseout="frontImage('ifolder/others/hidayah1.jpg')" id="hidayah" style="border-radius:0%;height:18%"></td>
+	<th>Full Name</th><td class="w3-hover-green">Ku Nur Hidayah Binti Ku Ahmad Romzi</td></tr>
+	<tr><th>IC Number</th><td class="w3-hover-green">980507-14-5046</td></tr>
+	<tr><th>Matrix Number</th><td class="w3-hover-green">2016483166</td></tr>
+	<tr><th>Birthdate</th><td class="w3-hover-green">7th May 1998</td></tr>
+	<tr><th>Current Education</th><td class="w3-hover-green">Diploma in Computer Science (CS110), UiTM Jasin</td></tr>
+	<tr><th>Hobbies</th><td class="w3-hover-green">Playing games, listening to musics and reading web novels</td></tr>
+	<tr><th>Motto</th><td class="w3-hover-green"><i>Better regret doing something you've done than to regret something you wish you'd done</i></td></tr>
+	</table><br>
+	<table class="w3-border w3-striped" style="position:absolute; top: 60px; right: 90px; height:335px;">
+	<tr><td align="center" class="w3-green"><b>My Playlist</b></td></tr>
+	<tr><td><img src="ifolder/others/playlist.jpg" style="border-radius:0%;height:-10%"></td></tr>
+	<tr><td align="center" class="w3-green"><strong>The Greatest Showman</strong><br>This Is Me</td></tr>
+	<tr><td align="center"><img src="ifolder/others/pause.png" style="height:20%;border-radius:0%" onclick="pauseAudio()">
+	<img src="ifolder/others/play.png" style="height:20%;border-radius:0%" onclick="playAudio()"></td></tr>
+	</table>
+  </div>
+<!---------------------------------------------------------------- END SECOND TAB ----------------------------------------------------------------> 
+
+<!---------------------------------------------------------------- START THIRD TAB ----------------------------------------------------------------> 
+  <div id="Animals" class="w3-container w3-border city" style="display:none;background-color:white;">
+	<center>
+	<div style="height: 380px; overflow:auto;">
+	<table cellpadding="8">
+	<br><tr>
+	<td><img src="ifolder/animals/antelope.jpeg" class="zoom" onmouseover="playEffect()"><br><center><!--ANTELOPE-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('antelope').style.display='block';">Antelope</button></center>
+		<div id="antelope" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('antelope').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Antilocapra Americana (Antelope)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Herbivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Bovidae (including cattle, sheep, goats)</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>15-20 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Antelopes have extremely developed senses which help them detect predators while they still have time to escape.</li>
+				<li>Antelopes do not replace their horns annually. They grow continuously throughout their entire life.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Antelope.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/badger.jpg" class="zoom" onmouseover="playEffect()"><br><center><!--BADGER-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('badger').style.display='block'">Badger</button></center>
+		<div id="badger" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('badger').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Taxidea Taxus (Badger)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Carnivorous/Omnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Mustelidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>4-10 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Badgers are nocturnal, meaning they are most active at night and sleep during the day.</li>
+				<li>Badgers have acute hearing and excellent sense of smell, which helps them find food, but their eyes are small and their eyesight is not very good.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Badger.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/capybara.jpg" class="zoom" onmouseover="playEffect()"><br><center><!--CAPYBARA-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('capybara').style.display='block'">Capybara</button></center>
+		<div id="capybara" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('capybara').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Hydrochoerus Hydrochaeris (Capybara)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Herbivourous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Caviidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>8-10 Years (in average)</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Capybaras are extremely social, and live in groups of between 10-20.</li>
+				<li>Capybaras hop because their forelegs are slightly shorter than the hind legs. Their front feet have four toes while the rear ones have three toes only.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Capybara.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/dolphin.jpg" class="zoom" onmouseover="playEffect()"><center><!--DOLPHIN-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('dolphin').style.display='block'">Dolphin</button></center>
+		<div id="dolphin" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('dolphin').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Delphinus Delphis (Dolphin)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Carnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Delphinidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>35 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>There are 44 different dolphins species such as Orca, Baiji, Tucuxi and striped dolphin.</li>
+				<li>Dolphins have teeth, but they don't use them to chew food. Instead, dolphins use their teeth to catch prey and swallow it whole.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position:relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Dolphin.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/emu.jpeg" class="zoom" onmouseover="playEffect()"><center><!--EMU-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('emu').style.display='block'">Emu</button></center>
+		<div id="emu" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('emu').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Dromaius Novaehollandiae (Emu)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Omnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Casuariidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>10-20 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>They are very good swimmers – in fact they love to play in water or mud!</li>
+				<li>They are the only birds with calf muscles. Their feet have three toes and fewer bones and muscles than those of flying birds.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Emu.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/ferret.jpg" class="zoom" onmouseover="playEffect()"><center><!--FERRET-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('ferret').style.display='block'">Ferret</button></center>
+		<div id="ferret" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('ferret').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Mustela Putorius Furo (Ferret)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Carnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Mustelidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>6-10 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>A group of ferrets is called a “business.”</li>
+				<li>Ferrets are closer to cats and dogs than to mice or rats.</li>
+				<li>Bathing a ferret often results in a smellier pet. A ferret’s oil glands will over produce in an attempt to replace the oils that have been washed down the drain.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Ferret.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/gibbon.jpg" class="zoom" onmouseover="playEffect()"><center><!--GIBBON-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('gibbon').style.display='block'">Gibbon</button></center>
+		<div id="gibbon" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('gibbon').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Hylobatidae (Gibbon)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Herbivorous (mostly)</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Hylobatidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>30-35 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Gibbon walks using only legs both on ground or trees. Arms are used for balancing.</li>
+				<li>All but one species of gibbon is listed as endangered or critically endangered, made them the most threatened primates on Earth.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Gibbon.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	</tr>
+	<tr>
+	<td><img src="ifolder/animals/hedgehog.jpg" class="zoom" onmouseover="playEffect()"><center><!--HEDGHEHOG-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('hedgehog').style.display='block'">Hedgehog</button></center>
+		<div id="hedgehog" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('hedgehog').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Erinaceinae (Hedgehog)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Omnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Erinaceidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>2-5 Years (for Woodland Hedgehog)</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>A group of hedgehogs is called an “array.”</li>
+				<li>The 'hedge' part of their name comes from where they build their nests hedges, bushes and shrubs. The ‘hog’ part comes from the small grunting sound they make which is similar to a warthog.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Hedgehog.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	</td>
+	<td><img src="ifolder/animals/indri.jpg" class="zoom" onmouseover="playEffect()"><center><!--INDRI-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('indri').style.display='block'">Indri</button></center>
+		<div id="indri" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('indri').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Indri Indri (Indri)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Herbivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Indriidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>15-18 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Found only in Madagascar. They are critically endangered due to habitat loss and hunting.</li>
+				<li>They are very loud and have very unique songs.  Adult indris go to the top of a tree so that their call can be heard from up to 3 km away.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Indri.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	</td>
+	<td><img src="ifolder/animals/jerboa.jpg" class="zoom" onmouseover="playEffect()"><center><!--JERBOA-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('jerboa').style.display='block'">Jerboa</button></center>
+		<div id="jerboa" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('jerboa').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Euchoreutes Naso (Long-eared Jerboa)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Omnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Dipodidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>2-6 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>The colour of the fur matches the colour of the environment (it provides camouflage).</li>
+				<li>Jerboa has flap of skin in the nose and hair in the ears to prevent entering of sand. Also, its pads are furry to facilitate movement across the sand.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Jerboa.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	</td>
+	<td><img src="ifolder/animals/kiwi.jpg" class="zoom" onmouseover="playEffect()"><center><!--KIWI-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('kiwi').style.display='block'">Kiwi</button></center>
+		<div id="kiwi" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('kiwi').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Apteryx (Kiwi)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Omnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Apterygidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>20-30 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Female kiwis lay one of the largest eggs in relation to their body size of any bird in the world. A kiwi egg takes up about 20% of the female bird's body.</li>
+				<li>Kiwis actually have excellent memories, and can remember unsavory incidents for at least five years.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Kiwi.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	</td>
+	<td><img src="ifolder/animals/lynx.jpg" class="zoom" onmouseover="playEffect()"><center><!--LYNX-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('lynx').style.display='block'">Lynx</button></center>
+		<div id="lynx" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('lynx').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Lynx Pardinus (Iberian Lynx)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Carnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Felidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>14.5 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Lynx is not a fast runner. Since it does not chase the prey, it hunts from an ambush and uses the element of surprise.</li>
+				<li>Lynx is very vocal animal. It can produce cat-like meows, purrs and hisses. They are also a nocturnal.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Lynx.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	</td>
+	<td><img src="ifolder/animals/manatee.jpg" class="zoom" onmouseover="playEffect()"><center><!--MANATEE-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('manatee').style.display='block'">Manatee</button></center>
+		<div id="manatee" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('manatee').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Sirenia (Manatee)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Herbivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Trichechidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>40-60 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Manatees have no natural predators in the wild.</li>
+				<li>Manatees go to the surface of the water every three to five minutes to breathe although they can remain underwater longer, holding their breath for up to 20 minutes.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Manatee.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	</td>
+	<td><img src="ifolder/animals/narwhal.jpg" class="zoom" onmouseover="playEffect()"><center><!--NARWHAL-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('narwhal').style.display='block'">Narwhal</button></center>
+		<div id="narwhal" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('narwhal').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Monodon Monoceros (Narwhal)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Carnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Monodontidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>30-55 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Its tusk is actually a tooth and they only have two teeth.</li>
+				<li>The word “narwhal” is an Old Norse word that means “corpse whale.”</li>
+				<li>They live in the Arctic waters of Canada, Russia, Norway, and Greenland.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Narwhal.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	</td>
+	</tr>
+	<tr>
+	<td><img src="ifolder/animals/owl.jpg" class="zoom" onmouseover="playEffect()"><center><!--OWL-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('owl').style.display='block'">Owl</button></center>
+		<div id="owl" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('owl').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Strigiformes (Owl)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Carnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Strigidae (for Common Owl)</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>4 Years (for Barn Owl)</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>A group of owls is called a “parliament.”</li>
+				<li>Owls can rotate their necks 270 degrees.</li>
+				<li>The eyes of an owl are not true “eyeballs.”</li>
+				<li>Barn Owls swallow their prey whole</li>
+				<li>Owls hunt other owls.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Owl.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/parrot.jpg" class="zoom" onmouseover="playEffect()"><center><!--PARROT-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('parrot').style.display='block'">Parrot</button></center>
+		<div id="parrot" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('parrot').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Psittaciformes (Parrot)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Omnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Psittacoidea</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>10 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>All parrots are brightly colored.</li>
+				<li>Parrots are the only birds that are able to pick food with their feet and bring it to the mouth.</li>
+				<li>Parrots produce loud screeching noise and use body language for communication.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Parrot.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/quokka.jpg" class="zoom" onmouseover="playEffect()"><center><!--QUOKKA-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('quokka').style.display='block'">Quokka</button></center>
+		<div id="quokka" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('quokka').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Setonix Brachyurus (Quokka)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Herbivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Macropodidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>5-10 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>The quokka is the only land mammal on Rottnest Island.</li>
+				<li>Quokkas are often described as being the world's happiest animal. Despite this common reputation, they have sharp claws and it is not uncommon for children visiting Rottnest Island to be treated for bites.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Quokka.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/rabbit.jpg" class="zoom" onmouseover="playEffect()"><center><!--RABBIT-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('rabbit').style.display='block'">Rabbit</button></center>
+		<div id="rabbit" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('rabbit').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Oryctolagus Cuniculus (Rabbit)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Herbivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Leporidae‎</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>4 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Happy rabbits “purr,” making a chattering noise with their teeth, jump in the air and spin around.</li>
+				<li>A rabbit’s teeth never stop growing. Fortunately, they’re naturally kept short by the normal wear and tear of chewing.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Rabbit.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/sugar glider.jpg" class="zoom" onmouseover="playEffect()"><center><!--SUGAR GLIDER-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('sugarglider').style.display='block'">Sugar Glider</button></center>
+		<div id="sugarglider" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('sugarglider').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Petaurus Breviceps (Sugar Glider)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Omnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Petauridae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>12-15 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Wild gliders’ diet largely consists of Acacia Gum, which is indigestible to many species.</li>
+				<li>Sugar gliders make a variety of sounds from clicking, to what some have described as the sound of a rusty chainsaw.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Sugar Glider.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/toucan.jpg" class="zoom" onmouseover="playEffect()"><center><!--TOUCAN-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('toucan').style.display='block'">Toucan</button></center>
+		<div id="toucan" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('toucan').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Ramphastidae (Toucan)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Omnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Ramphastidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>18 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Toucans are one of the nosier jungle birds. They live for up to 20 years, and their predators include jaguars and other big cats.</li>
+				<li>Despite its size, the toucan's bill is very light as it is made of keratin in a honeycomb-like structure.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:310px; left: 440px;" controls>
+		<source src="ifolder/videos/Toucan.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/ulysses butterfly.jpg" class="zoom" onmouseover="playEffect()"><center><!--ULYSSES BUTTERFLY-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('ulyssesbutterfly').style.display='block'">Ulysses Butterfly</button></center>
+		<div id="ulyssesbutterfly" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('ulyssesbutterfly').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Papilio Ulysses (Ulysses Butterfly)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Herbivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Papilionidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>8 months (probably at most)</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>The top of their wings is bright blue, whilst underneath, they are dull brown for camouflage).</li>
+				<li>Males are attracted to the colour blue and will fly towards anything blue that they see from 30 metres away.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:310px; left: 440px;" controls>
+		<source src="ifolder/videos/Ulysses Butterfly.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	</tr>
+	<tr>
+	<td><img src="ifolder/animals/vampire bat.jpg" class="zoom" onmouseover="playEffect()"><center><!--VAMPIRE BAT-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('vampirebat').style.display='block'">Vampire Bat</button></center>
+		<div id="vampirebat" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('vampirebat').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Desmodus rotundus (Vampire Bat)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Carnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Phyllostomidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>12 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>They drink about half of their body weight in blood.</li>
+				<li>Vampire bats are known to share meals with each other.</li>
+				<li>When the bats feed, they use their teeth to shear away hair or feathers from a small spot and then cut into their preys’ flesh with their sharp incisors.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Vampire Bat.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/wallaby.jpg" class="zoom" onmouseover="playEffect()"><center><!--WALLABY-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('wallaby').style.display='block'">Wallaby</button></center>
+		<div id="wallaby" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('wallaby').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Macropus Agilis (Agile Wallaby)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Herbivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Macropodidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>11-14 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Wallabies use their tails to maintain balance and to hold themselves in a sitting posture.</li>
+				<li>A group of wallabies is called a “court”/“mob”/“troupe.”</li>
+				<li>Wallabies are solitary animals, although they will often forage for food in groups of up to 30 animals.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Wallaby.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/xerus.jpg" class="zoom" onmouseover="playEffect()"><center><!--XERUS-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('xerus').style.display='block'">Xerus</button></center>
+		<div id="xerus" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('xerus').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Xerus Inauris (Cape Ground Squirrel)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Omnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Sciuridae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>11.5 Years (at maximum)</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Xerus is also known as the African Ground Squirrel.</li>
+				<li>Xerus species are diurnal (non-nocturnal).</li>
+				<li>Xerus species live in Africa.</li>
+				<li>Xerus eat roots, seeds, fruits, grains, insects, small vertebrates and eggs.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:310px; left: 440px;" controls>
+		<source src="ifolder/videos/Xerus.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/yak.jpg" class="zoom" onmouseover="playEffect()"><center><!--YAK-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('yak').style.display='block'">Yak</button></center>
+		<div id="yak" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('yak').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Bos Grunniens (Domesticated Yak)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Herbivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Bovidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>20 Years</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>A herd of yaks consists primarily of females and their young, with a smaller number of adult males.</li>
+				<li>Most of their time is spent grazing on mountain plains, eating grass, herbs and wild flowers.</li>
+				<li>In Asia, they produce a lot for meat, wool and milk.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Yak.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	<td><img src="ifolder/animals/zebrafish.jpg" class="zoom" onmouseover="playEffect()"><center><!--ZEBRAFISH-->
+		<button class="w3-button w3-black w3-round-xxlarge w3-hover-blue" onclick="document.getElementById('zebrafish').style.display='block'">Zebrafish</button></center>
+		<div id="zebrafish" class="w3-modal">
+		<div class="w3-modal-content w3-animate-zoom">
+		<header class="w3-container w3-black"><span onclick="document.getElementById('zebrafish').style.display='none';playClick()" class="w3-closebtn">&times;</span></header>
+		<div class="w3-container"><br>
+		<table class="w3-border w3-striped" style="width: 400px" cellpadding="5">
+		<tr><th class="w3-blue">Scientific Name</th><td>Danio Rerio (Zebrafish)</td></tr>
+		<tr><th class="w3-blue">Type of Animal</th><td>Omnivorous</td></tr>
+		<tr><th class="w3-blue">Animal Family</th><td>Cyprinidae</td></tr>
+		<tr><th class="w3-blue">Lifespan</th><td>42 Months</td></tr>
+		<tr><td colspan="2" class="w3-blue">
+			<ul style="list-style-type:square">
+				<li>Zebrafish are vertebrates, which means that they have a backbone like humans.</li>
+				<li>Lives in northern India, Pakistan, Bhutan, and Nepal.</li>
+				<li>The zebrafish is known for its unique regenerative abilities and rapid embryonic development.</li>
+			</ul>
+		</td></tr></table>
+		<video width="400" height="320" style="position: relative; bottom:330px; left: 440px;" controls>
+		<source src="ifolder/videos/Zebrafish.mp4" type="video/mp4"></video>
+		</div></div></div>
+	</td>
+	</tr>
+	</table></div>
+	</center>
+  </div>
+</div>
+<!---------------------------------------------------------------- END THIRD TAB ----------------------------------------------------------------> 
+
+<!---------------------------------------------------------------- START FOURTH TAB ----------------------------------------------------------------> 
+
+ <div id="Quiz" class="w3-container w3-border city" style="background-color:white;height:382px;display:none;position:absolute;top:158px;left:116px;width:1118px;">
+    <br><center>
+	<form id="quizzes" name="quizzes">
+	<table class="w3-border w3-striped" style="width:90%;font-size:14px" cellpadding="3">
+	<tr><td style="width:33%" class="w3-hover-blue"><div>What is the scientific name for Badger?</div>
+		<input type="radio" id="dispq" name="question1" value="Euchoreutes Naso" onclick="wrong()">Euchoreutes Naso<br>
+		<input type="radio" id="dispq" name="question1" value="Monodon Monoceros" onclick="wrong()">Monodon Monoceros<br>
+		<input type="radio" id="dispq" name="question1" value="Taxidea Taxus" onclick="correct()">Taxidea Taxus
+	</td>
+	<td style="width:33%" class="w3-hover-blue"><div>What do we call a group of hedgehogs?</div>
+		<input type="radio" id="dispq" name="question2" value="An array" onclick="correct()">An array<br>
+		<input type="radio" id="dispq" name="question2" value="A parliament" onclick="wrong()">A parliament<br>
+		<input type="radio" id="dispq" name="question2" value="A troupe" onclick="wrong()">A troupe
+	</td>
+	<td style="width:33%" class="w3-hover-blue"><div>What is the name of the only lemur with <b>short tail</b>?</div>
+		<input type="radio" id="dispq" name="question3" value="Ring-tailed Lemur" onclick="wrong()">Ring-tailed Lemur<br>
+		<input type="radio" id="dispq" name="question3" value="Indri" onclick="correct()">Indri<br>
+		<input type="radio" id="dispq" name="question3" value="Sifakas" onclick="wrong()">Sifakas
+	</td></tr>
+	<tr><td style="width:33%" class="w3-hover-blue"><div>Which of the following animals that are extremely social?</div>
+		<input type="radio" id="dispq" name="question4" value="Capybaras" onclick="correct()">Capybaras<br>
+		<input type="radio" id="dispq" name="question4" value="Jerboas" onclick="wrong()">Jerboas<br>
+		<input type="radio" id="dispq" name="question4" value="Wallabies" onclick="wrong()">Wallabies
+	</td>
+	<td style="width:33%" class="w3-hover-blue"><div>Below are the facts about ferret, <u>except</u></div>
+		<input type="radio" id="dispq" name="question5" value="A group of ferrets are called a "business"." onclick="wrong()">A group of ferrets are called a "business".<br>
+		<input type="radio" id="dispq" name="question5" value="Ferrets are not one of the ideal pets in the U.S.A" onclick="correct()">Ferrets are not one of the ideal pets in the U.S.A<br>
+		<input type="radio" id="dispq" name="question5" value="Ferrets are closer to dogs and cats, rather than to mice" onclick="wrong()">Ferrets are closer to dogs and cats, rather than to mice
+	</td>
+	<td style="width:33%" class="w3-hover-blue"><div>Which of the animal below that <b>does not</b> belongs to <i>Mustelidae</i> family?</div>
+		<input type="radio" id="dispq" name="question6" value="Badger" onclick="wrong()">Badger<br>
+		<input type="radio" id="dispq" name="question6" value="Xerus" onclick="correct()">Xerus<br>
+		<input type="radio" id="dispq" name="question6" value="Ferret" onclick="wrong()">Ferret
+	</td></tr>
+	<tr><td style="width:34%" class="w3-hover-blue"><div>What does the scientific name of narwhal, <i>Monodon Monoceros</i> means?</div>
+		<input type="radio" id="dispq" name="question7" value="One tusk, one tooth" onclick="wrong()">"One tusk, one tooth"<br>
+		<input type="radio" id="dispq" name="question7" value="One tooth, one horn" onclick="correct()">"One tooth, one horn"<br>
+		<input type="radio" id="dispq" name="question7" value="One tooth, one life" onclick="wrong()">"One tooth, one life"
+	</td>
+	<td style="width:34%" class="w3-hover-blue"><div>What is the most threaten primates on Earth?</div>
+		<input type="radio" id="dispq" name="question8" value="Gibbons" onclick="correct()">Gibbons<br>
+		<input type="radio" id="dispq" name="question8" value="Tigers" onclick="wrong()">Tigers<br>
+		<input type="radio" id="dispq" name="question8" value="Indris" onclick="wrong()">Indris
+	</td>
+	<td style="width:34%" class="w3-hover-blue"><div>Antelopes do not replace their horns annually. They grow continuously throughout their entire life.</div>
+		<input type="radio" id="dispq" name="question9" value="True" onclick="correct()">True<br>
+		<input type="radio" id="dispq" name="question9" value="False" onclick="wrong()">False<br>
+		<input type="radio" id="dispq" name="question9" value="Not stated" onclick="wrong()">Not stated
+	</td></tr></table>
+  <input id="button" type="button" value="Finish" onclick="checkQs();"></form></center><br>
+  </div>
+<!---------------------------------------------------------------- END FOURTH TAB ----------------------------------------------------------------> 
+
+<!---------------------------------------------------------------- START AUDIOS ----------------------------------------------------------------> 
+
+<audio id="sound"><source src="ifolder/others/Pop Sound.mp3"></audio>
+<audio id="click"><source src="ifolder/others/Click Sound.mp3"></audio>
+<audio id="correct"><source src="ifolder/others/Correct Sound.mp3"></audio>
+<audio id="wrong"><source src="ifolder/others/Wrong Sound.mp3"></audio>
+<audio id="showman"><source src="ifolder/others/The Greatest Showman - This Is Me.mp3"></audio>
+
+<!---------------------------------------------------------------- END AUDIOS ----------------------------------------------------------------> 
+
+<!--------------------------------------------------------------- START JAVASCRIPT ---------------------------------------------------------------> 
+<script type="text/javascript">
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-blue", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-blue";
+}
+function backImage(a) {
+    document.getElementById("hidayah").src=a;
+}
+function frontImage(b) {
+    document.getElementById("hidayah").src=b;
+}
+function playAudio() {
+	var audio = document.getElementById("showman");
+      audio.play();
+}
+function pauseAudio() {
+	var audio = document.getElementById("showman");
+      audio.pause();
+}
+function playEffect() {
+	var audio = document.getElementById("sound");
+      audio.play();
+}
+function playClick() {
+	var audio = document.getElementById("click");
+      audio.play();
+}
+function correct() {
+	var audio = document.getElementById("correct");
+      audio.play();
+}
+function wrong() {
+	var audio = document.getElementById("wrong");
+      audio.play();
+}
+function checkQs(){
+	var q1=document.quizzes.question1.value;
+	var q2=document.quizzes.question2.value;
+	var q3=document.quizzes.question3.value;
+	var q4=document.quizzes.question4.value;
+	var q5=document.quizzes.question5.value;
+	var q6=document.quizzes.question6.value;
+	var q7=document.quizzes.question7.value;
+	var q8=document.quizzes.question8.value;
+	var q9=document.quizzes.question9.value;
+	var correct=0;
+
+	if (q1=="Taxidea Taxus") 
+	{	correct++;}
+	if (q2=="An array") 
+	{	correct++;}
+	if (q3=="Indri") 
+	{	correct++;}
+	if (q4=="Capybaras") 
+	{	correct++;}
+	if (q5=="Ferrets are not one of the ideal pets in the U.S.A") 
+	{	correct++;}
+	if (q6=="Xerus") 
+	{	correct++;}
+	if (q7=="One tooth, one horn") 
+	{	correct++;}
+	if (q8=="Gibbons") 
+	{	correct++;}
+	if (q9=="True") 
+	{	correct++;}
+	
+	alert("You got "+correct+" out of 9!");
+	document.getElementById("quizzes").reset();
+}
+</script>
+<!--------------------------------------------------------------- END JAVASCRIPT ---------------------------------------------------------------> 
+
+</body>
+</html>
